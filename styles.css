@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+div {
+    position: relative;
+    height: 25vh;
+    width: 16.666667vw;
+    float: right;
+}
+
+.moused {
+    position: relative;
+    height: 25vh;
+    width: 16.66667vw;
+    float: right;
+    animation: 5s 1 linear ease-in-out;
+    animation-name: goAway;
+    opacity: 0;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bgvid {
+    position: absolute;
+}
+
+@keyframes goAway{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        filter: opacity(0);
+        transform: rotateX(90deg) scale(5);
+        filter: blur(100px);
+        border-radius: 50%;
+    }
+}
+
